@@ -1,9 +1,9 @@
 import { useState } from "react";
-
+import { MdOutlineAddBox } from "react-icons/md";
 function AddToDo({onNewItem}) {
 
-  const [todoName ,setTodoName] = useState();
-  const [dueDate, setdueDate] = useState();
+  const [todoName ,setTodoName] = useState("");
+  const [dueDate, setdueDate] = useState("");
 
   const handleNameChange = (event) =>{
     setTodoName(event.target.value)
@@ -33,7 +33,7 @@ setdueDate(event.target.value);
           </div>
           <div className="col-sm-2">
             <button type="button" className="btn btn-success kg-button" onClick={handleAddButtonClicked}>
-              ADD
+              <MdOutlineAddBox />
             </button>
           </div>
         </div>

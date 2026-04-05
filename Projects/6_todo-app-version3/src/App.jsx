@@ -10,7 +10,7 @@ function App() {
   const [todoItems, setTodoItems] = useState([]);
 
   const handleNewItem = (itemName, itemDueDate) => {
-    console.log(`New item added : ${itemName}  Date: ${itemDueDate}`);
+    
     const newTodoItems = [
       ...todoItems,
       { name: itemName, dueDate: itemDueDate },
@@ -22,7 +22,7 @@ function App() {
     const newTodoItems =  todoItems.filter(item => item.name !== todoItemName);
     setTodoItems(newTodoItems);
     
-    console.log(`Item deleted:-${todoItemName}`)
+    
   }
   return (
     <center className="todo-container">
